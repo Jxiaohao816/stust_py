@@ -61,7 +61,10 @@ cold_drink = ColdDrink("Iced Tea", "Less Ice", "Medium Sugar")
 print("Cold Drink Name:", cold_drink.drink_name) #冷飲資訊
 print("Ice Level:", cold_drink.ice)
 print("Sugar Level:", cold_drink.sugar)
-
+milk_tea = ColdDrink("Milktea","Less Ice", "Medium Sugar")
+print("Cold Drink Name:", milk_tea.drink_name) #冷飲資訊
+print("Ice Level:", cold_drink.ice)
+print("Sugar Level:", cold_drink.sugar)
 hot_drink = HotDrink("Coffe","No Suger")
 print("Hot_Drink_Name:",hot_drink.drink_name)#熱飲資訊
 print("Sugar Level:", hot_drink.sugar)
