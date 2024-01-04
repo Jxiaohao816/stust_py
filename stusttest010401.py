@@ -15,42 +15,42 @@ class Chicken:
         self.spice_level += spice
         print(f"{self.name} spice level increased to {self.spice_level}!")
 
-    def make_crispy(self):
-        self.is_crispy = True
-        print(f"{self.name} is now crispy!")
+    def make_cut(self):
+        self.cut= False
+        print(f"{self.name} 老闆我的雞排不准切!!!")
 
     def display_info(self):
         print(f"品項: {self.name}, 要不要切: {self.cut}, 辣度: {self.spice_level}, Fried: {self.is_roast}, Crispy: {self.is_crispy}, Ordered Quantity: {self.order_quantity}")
 
 # 建立四個炸雞物件
 chicken1 = Chicken("Spicy", False, 5, False, False)
-chicken2 = Chicken("Mild", False, 3, False, False)
+chicken2 = Chicken("Mild",True, 3, False, False)
 chicken3 = Chicken("Super Spicy", True, 7, False, False)
 chicken4 = Chicken("Extra Crispy", False, 6, False, False)
 
-# 分別呼叫四個副程式
-chicken1.place_order(10)
-chicken1.add_spice(2)
-chicken1.make_crispy()
-chicken1.display_info()
+# 分別呼叫四個副程式，這裡可以看成奧客改單
+chicken1.place_order(10)    #數量
+chicken1.add_spice(2)   #另外加辣
+chicken1.make_cut()  #叫老闆不要切
+chicken1.display_info()  #顯示餐點資訊
 
 print("--------------------")
 
 chicken2.place_order(5)
 chicken2.add_spice(1)
-chicken2.make_crispy()
+chicken2.make_cut()
 chicken2.display_info()
 
 print("--------------------")
 
 chicken3.place_order(15)
-chicken3.add_spice(3)
-chicken3.make_crispy()
+chicken3.add_spice(0)
+chicken3.make_cut()
 chicken3.display_info()
 
 print("--------------------")
 
 chicken4.place_order(8)
-chicken4.add_spice(4)
-chicken4.make_crispy()
+chicken4.add_spice(0)
+chicken4.make_cut()
 chicken4.display_info()
